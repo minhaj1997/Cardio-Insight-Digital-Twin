@@ -10,6 +10,7 @@ A digital twin application for cardiovascular health monitoring and risk assessm
 - Patient data clustering for risk categorization
 - Historical patient data tracking
 - Docker containerization for easy deployment
+- REST API for patient data upload
 
 ## Project Structure
 
@@ -85,8 +86,36 @@ docker-compose up
 ```
 
 5. Access the application:
-   - Open your web browser
-   - Go to http://localhost:8050
+   - Dashboard: http://localhost:8050
+   - API: http://localhost:5001
+
+## API Usage
+
+### Running the API Server
+
+After starting the Docker containers, run the API server in a new terminal:
+```bash
+docker exec -it codefiles-app-1 python routes.py
+```
+
+### API Endpoints
+
+#### Upload Patient Record
+- **URL**: http://localhost:5001/api/upload_patient_record
+- **Method**: POST
+- **Headers**: 
+  - Content-Type: application/json
+- **Body**:
+```json
+{
+    "Age": 45,
+    "WaistCirc": 90,
+    "BMI": 25.5,
+    "BloodGlucose": 120,
+    "HDL": 45,
+    "Triglycerides": 150
+}
+```
 
 ## Usage
 
@@ -95,6 +124,7 @@ docker-compose up
 3. Navigate between different views using the navigation links
 4. Monitor health alerts and risk factors
 5. View historical patient data in the past patients section
+6. Use the API to upload new patient records
 
 ## Stopping the Application
 
@@ -106,8 +136,9 @@ docker-compose down
 ## Troubleshooting
 
 - If port 8050 is already in use, you can modify the port in `docker-compose.yml`
-- If port 3307 is already in use, you can modify the MySQL port in `docker-compose.yml`
+- If port 5001 is already in use, you can modify the port in `docker-compose.yml`
 - Make sure the dataset file is in the correct location: `heart datasets/Metabolic Syndrome_Minhas Open data set.xlsx`
+- If the API container name is different, use `docker ps` to check the correct container name
 
 ## Contributing
 
@@ -116,10 +147,6 @@ docker-compose down
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
 
