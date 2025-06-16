@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - "8050:8050"
+      - "5001:5000"
     environment:
       - MYSQL_HOST=db
       - MYSQL_USER=root
