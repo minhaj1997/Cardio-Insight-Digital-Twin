@@ -5,9 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 
 class ModelTrainer:
-    def __init__(self, selected_features, categorical_features):
+    def __init__(self, selected_features):
         self.selected_features = selected_features
-        self.categorical_features = categorical_features
         self.model = RandomForestClassifier(random_state=42)
         self.X_train = None
         self.X_test = None

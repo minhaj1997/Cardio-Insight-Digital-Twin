@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "12ae76f5-f28b-4e86-837e-990ae2eb4121",
+		"name": "MS Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34438662"
+	},
+	"item": [
+		{
+			"name": "Upload Patient Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Age\": 55,\n  \"Name\": \"Test 1\",\n  \"WaistCirc\": 70,\n  \"BMI\": 24,\n  \"BloodGlucose\": 148,\n  \"HDL\": 45,\n  \"Triglycerides\": 236\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/upload_patient_record",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"upload_patient_record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Patient Record 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Age\": 30,\n  \"Name\": \"test 2\",\n  \"WaistCirc\": 40,\n  \"BMI\": 19,\n  \"BloodGlucose\": 108,\n  \"HDL\": 40,\n  \"Triglycerides\": 125\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/upload_patient_record",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"upload_patient_record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Patient Record  3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Age\": 40,\n  \"Name\": \"test 3\",\n  \"WaistCirc\": 90,\n  \"BMI\": 40,\n  \"BloodGlucose\": 140,\n  \"HDL\": 39,\n  \"Triglycerides\": 240\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/upload_patient_record",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"upload_patient_record"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
