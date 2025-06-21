@@ -63,31 +63,24 @@ python main.py
 
 ### Docker Deployment
 
-1. Create a project directory:
-```bash
-mkdir cardio-insight
-cd cardio-insight
-```
+These steps assume you are on a machine with Docker and have cloned the repository.
 
-2. Place all required files in the directory:
-   - Copy `cardio-insight-app.tar`
-   - Copy `docker-compose.yml`
-   - Copy `digital_twin_patient.sql`
-   - Copy the `heart datasets` directory
+1.  **Navigate to Project Directory**
+    Make sure you are in the root directory of the project.
 
-3. Load the Docker image:
-```bash
-docker load < cardio-insight-app.tar
-```
+2.  **Check Dataset**
+    Ensure the `heart datasets` directory exists and contains the required `.xlsx` file.
 
-4. Start the application:
-```bash
-docker-compose up
-```
+3.  **Build and Run with Docker Compose**
+    This single command will build the Docker images for the services and start the containers. The `--build` flag ensures that the images are rebuilt if there are any changes to the source code or `Dockerfile`.
+    ```bash
+    docker-compose up --build
+    ```
+    Your application (dashboard) and database will now be running.
 
-5. Access the application:
-   - Dashboard: http://localhost:8050
-   - API: http://localhost:5001
+## Accessing the Application
+- **Dashboard**: `http://localhost:8050`
+- **API Base URL**: `http://localhost:5001`
 
 ## API Usage
 
@@ -147,6 +140,10 @@ docker-compose down
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
 
