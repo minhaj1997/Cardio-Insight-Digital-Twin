@@ -1,6 +1,6 @@
-# Cardio Insight Digital Twin
+# Digital Shadow
 
-A digital twin application for cardiovascular health monitoring and risk assessment. This application uses machine learning to analyze patient data and provide real-time insights into metabolic syndrome risk factors.
+A digital shadow application for cardiovascular health monitoring and risk assessment. This application uses machine learning to analyze patient data and provide real-time insights into metabolic syndrome risk factors.
 
 ## Features
 
@@ -37,29 +37,6 @@ A digital twin application for cardiovascular health monitoring and risk assessm
 - MySQL 8.0
 
 ## Installation
-
-### Local Development
-
-1. Clone the repository:
-```bash
-git clone https://github.com/minhaj1997/Cardio-Insight-Digital-Twin.git
-cd Cardio-Insight-Digital-Twin
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up the database:
-```bash
-mysql -u root -p < digital_twin_patient.sql
-```
-
-4. Run the application:
-```bash
-python main.py
-```
 
 ### Docker Deployment
 
